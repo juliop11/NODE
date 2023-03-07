@@ -15,7 +15,7 @@ function readConsole(callback) {
             rl.question('Cuantos años tienes? :', (respuesta) => {
                 objeto.age = respuesta;
 
-                return callback(objeto)
+                 callback(objeto)
             })
         })
     })
