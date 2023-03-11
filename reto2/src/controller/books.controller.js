@@ -1,8 +1,8 @@
 const { Book } = require("../models/book");
 
-let libro1 = new Book(234, 7, "El principito", "Tapa blanda", "Antonie de Saint", 25, "")
-let libro2 = new Book(655, 6, "Harry potter", "Tapa dura", "Joanne Rowling", 35, "")
-let libro3 = new Book(557, 8, "La chica del tren", "Tapa blanda", "Paula Hawkins", 28, "")
+let libro1 = new Book(234, 7, "El principito", "Tapa blanda", "Antonie de Saint", 25, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5DOdmwI_VVPqoYsVGnoDX9UA3M0_hXP1BiQ&usqp=CAU")
+let libro2 = new Book(655, 6, "Harry potter", "Tapa dura", "Joanne Rowling", 35, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIBa889rxTjtuFJTW5MOA7MXT_m77i7mfGBg&usqp=CAU")
+let libro3 = new Book(557, 8, "La chica del tren", "Tapa blanda", "Paula Hawkins", 28, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFPnric7nxjrwba_ktZFJP2cOrHhorE-EGew&usqp=CAU")
 
 let books = [libro1, libro2, libro3];
 
