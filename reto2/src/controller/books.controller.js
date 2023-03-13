@@ -24,7 +24,7 @@ function getBookId(request, response) {
             respuesta = { error: false, codigo: 200, mensaje: "Libro encontrado", data: libroEncontrado }
         }
         else {
-            respuesta = { error: true, codigo: 200, mensaje: "No hay coincidencias", data: books }
+            respuesta = { error: true, codigo: 200, mensaje: "No hay coincidencias"}
         }
     }
 
