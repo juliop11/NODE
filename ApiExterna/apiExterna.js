@@ -1,68 +1,45 @@
-class Pokemon {
-    constructor(nombre) {
-        this.nombre = nombre;
-    }
+let pokeNombre = document.getElementById("pokemon");
+let cuerpo = document.querySelector(".cards")
+let imagen = document.getElementById("imagen")
+let type = document.getElementById("type")
+let nombrePoke = document.getElementById("nombrePoke");
+
+function buscar(pokeNombre){
+
+    getPokemon(pokeNombre.value)
 }
 
+function getPokemon(pokemon) {
 
-async function getPokemon() {
+   
+    // console.log(pokemon);
 
-    let url = "https://pokeapi.co/api/v2/pokemon/";
+    let url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
 
     let param = {
-
         headers: { "Content-type": "application/json; charset= UTF-8" },
         method: "GET"
     }
 
-    try {
-        let data = await fetch(url, param);
-        let result = await data.json();
-        document.getElementById("mostrarNombre").value = result.data.nombre;
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-
-async function postPokemon() {
-
-    let pokemon = new Pokemon(document.getElementById("nombre").value)
-
-    let url = "https://pokeapi.co/api/v2/pokemon/";
-
-    let param = {
-
-        headers: { "Content-type": "application/json; charset= UTF-8" },
-        body: JSON.stringify(pokemon),
-        method: "POST"
-    }
     fetch(url, param)
         .then(function (data) {
+            // console.log(data);
             return data.json()
         })
-        .then(function (result) {
-            if (result.error)
-                showToast("ERROR: " + result.mensaje, "bg-danger")
-            else
-                showToast("Usuario creado correctamente", "bg-success")
+        .then(function (pokemon) {
 
-                console.log(result);
+          
+                imagen.src = pokemon.sprites.other.home.front_default;
+                nombrePoke.innerHTML = pokemon.name;
+                type.innerHTML = pokemon.types[0].type.name;
+
+                // console.log(result.abilities);
+                // console.log(result.species);
         })
-        .catch(function(error){
+
+        .catch(function (error) {
             console.log(error);
         })
-}
 
 
-function showToast(mensaje,color){
-
-    document.getElementById("toastText").innerText=mensaje;
-    let toastElement = document.getElementById("toast")
-
-    toastElement.className = toastElement.className.replace("bg-warning").replace("bg-danger") + " " + color;
-
-    let toast = new bootstrap.toast(toastElement)
-    toast.show()
 }
