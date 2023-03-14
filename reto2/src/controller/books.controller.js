@@ -15,7 +15,7 @@ function getBookId(request, response) {
 
     if (!libro) {
 
-        respuesta = books;
+        respuesta = { error: false, codigo: 200, mensaje: "Libro encontrado", data:books }
     }
     else {
 
