@@ -1,0 +1,101 @@
+.caja {
+    border: 2px solid black;
+    background-image: url("https://img.freepik.com/foto-gratis/marco-papel-colores_23-2148514721.jpg?w=996&t=st=1678708202~exp=1678708802~hmac=33605309566f697beada8094b1c8f94b97a15a63f89045ab911d9ac5bf284368");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.nombre{
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    border: 3px solid rgb(59, 78, 141);
+    background-color: rgb(211, 106, 106);
+    border-radius: 20px;
+    height: 25%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+}
+.caja2{
+    /* border: 2px solid black; */
+    width: 70%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+}
+.name{
+    background-color: rgb(234, 240, 245);
+    border-radius: 5px;
+    display: flex;
+    width: 80%;
+    font-size:medium;
+}
+.boton{
+    /* border: 2px solid black; */
+    background-color: rgb(132, 195, 231);
+    border-radius: 5px;
+    height: 30%;
+    width: 30%;
+    margin: 15px;
+}
+
+.cards{
+       /* border: 2px solid black; */
+       width: 50%;
+       height: 100%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+.card {
+    width: 330px;
+    height: 430px;
+    background: rgb(218, 147, 81);
+    padding: .4em;
+    border-radius: 6px;
+  }
+  
+  .card-image {
+    background-color: rgb(204, 197, 160);
+    width: 100%;
+    height: 60%;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .card-image:hover {
+    transform: scale(0.98);
+  }
+  
+  .category {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    padding: 10px 7px 0;
+  }
+  
+  .category:hover {
+    cursor: pointer;
+  }
+  
+  .typos {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 7px;
+  }
+  
+  .heading:hover {
+    cursor: pointer;
+  }
